@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
+
 import localFont from "next/font/local";
-import "./globals.css";
+
+import "@/styles/globals.css";
+import { cn } from "@/lib/utils";
+import Provider from "@/components/provider/provider";
+import Navbar from "@/components/navbar/navbar";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../styles/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../styles/fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -24,11 +29,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          `${geistSans.variable} ${geistMono.variable} antialiased`,
+          "min-h-screen bg-background relative",
+        )}
       >
-        {children}
+        <Provider>
+          <nav>
+            <Navbar />
+          </nav>
+          {children}
+        </Provider>
       </body>
     </html>
   );
