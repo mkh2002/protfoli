@@ -4,6 +4,8 @@ import { LuBookCopy, LuClock, LuFolderGit, LuFramer } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { RxVercelLogo } from "react-icons/rx";
 
+import { useSectionInView } from "@/lib/hooks/useSectionInView";
+
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 
 import Projects from "./project";
@@ -65,12 +67,15 @@ const items = [
 ];
 
 export default function Works() {
+  const { ref } = useSectionInView("Works", 1);
+
   return (
     <motion.section
+      ref={ref}
       animate={{ opacity: 1 }}
       className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw]"
       exit={{ opacity: 0 }}
-      id="projects"
+      id="works"
       initial={{ opacity: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
     >

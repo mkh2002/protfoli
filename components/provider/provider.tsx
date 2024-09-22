@@ -1,5 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "next-themes";
+
+import ActiveSectionContextProvider from "@/context/active-section-context";
 export default function Provider({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -10,7 +12,7 @@ export default function Provider({
       attribute="class"
       defaultTheme="dark"
     >
-      {children}
+      <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>
     </ThemeProvider>
   );
 }

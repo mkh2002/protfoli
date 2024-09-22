@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+
+import { useSectionInView } from "@/lib/hooks/useSectionInView";
 
 import { Timeline } from "../ui/timeline";
 
@@ -110,8 +113,11 @@ const content = [
 ];
 
 export default function Education() {
+  const { ref } = useSectionInView("Education", 0.5);
+
   return (
     <section
+      ref={ref}
       className="w-full max-w-[89vw] overflow-hidden  md:max-w-2xl lg:max-w-[60vw]"
       id="education"
     >

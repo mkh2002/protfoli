@@ -1,14 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
 import { LuNavigation } from "react-icons/lu";
-import { useRouter } from "next/navigation";
+
+import { useSectionInView } from "@/lib/hooks/useSectionInView";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 import { Spotlight } from "../ui/spotlight";
 import ShimmerButton from "../ui/shimmer-button";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export default function Hero() {
-  const router = useRouter();
+  const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const ani = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -16,7 +19,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home">
+    <section ref={ref} id="home">
       <div className="pb-20 pt-36">
         <Spotlight
           className="-left-10 -top-40 h-screen md:-left-32 md:-top-20"
@@ -65,7 +68,10 @@ export default function Hero() {
               className="w-full space-x-2 rounded-xl px-6 py-3 text-sm md:w-auto"
               icon={<LuNavigation />}
               word="Show My Works"
-              onClick={() => router.push("#projects")}
+              onClick={() => {
+                setActiveSection("Works");
+                setTimeOfLastClick(Date.now());
+              }}
             />
           </motion.div>
         </div>
