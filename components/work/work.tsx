@@ -45,11 +45,11 @@ const items = [
   },
   {
     title: "Next.js",
+    href: "https://nextjs.org/",
     header: <Nextjs />,
     icon: <RxVercelLogo className="size-4" />,
     className:
       "relative overflow-hidden md:flex-row gap-4 justify-center min-h-40 md:min-h-max md:col-span-3 md:row-span-1 lg:col-span-2 md:col-span-3",
-    otherClass: "",
   },
   {
     header: <Framer />,

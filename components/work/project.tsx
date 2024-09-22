@@ -7,7 +7,7 @@ import MessageCard, { MessageCardProps } from "../ui/message-card";
 const items: MessageCardProps[] = [
   {
     title: "Shop",
-    href: "http://localhost:3001/dashboard",
+    href: "https://github.com/mkh2002/shop",
     description: "Built with Next.js and Shadcn/ui",
     state: "Developing",
     icon: <LuFrame />,
@@ -16,6 +16,7 @@ const items: MessageCardProps[] = [
   },
   {
     title: "Bilibili Variant",
+    href: "https://github.com/mkh2002/b-var",
     description: "Built with Next.js and Python",
     state: "Compeleted",
     className: "z-10",

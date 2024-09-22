@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { cn } from "@/lib/utils";
 
 export const BentoGrid = ({
@@ -22,12 +24,15 @@ export const BentoGrid = ({
 export const BentoGridItem = ({
   className,
   title,
+  href,
   description,
   header,
   otherClass,
   icon,
 }: {
   className?: string;
+  href?: string;
+
   otherClass?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
@@ -42,13 +47,23 @@ export const BentoGridItem = ({
       )}
     >
       {header}
-      <div className={cn(otherClass)}>
-        <div className="flex items-center gap-2">
-          <p className="uppercase lg:text-xl lg:tracking-widest">{title}</p>
-          {icon}
+      {href ? (
+        <Link className={cn(otherClass)} href={href}>
+          <div className="flex items-center gap-2">
+            <p className="uppercase lg:text-xl lg:tracking-widest">{title}</p>
+            {icon}
+          </div>
+          <div className="text-sm text-muted-foreground">{description}</div>
+        </Link>
+      ) : (
+        <div className={cn(otherClass)}>
+          <div className="flex items-center gap-2">
+            <p className="uppercase lg:text-xl lg:tracking-widest">{title}</p>
+            {icon}
+          </div>
+          <div className="text-sm text-muted-foreground">{description}</div>
         </div>
-        <div className="text-sm text-muted-foreground">{description}</div>
-      </div>
+      )}
     </div>
   );
 };
