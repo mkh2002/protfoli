@@ -1,5 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+
+import { useSectionInView } from "@/lib/hooks/useSectionInView";
 
 import { Timeline } from "../ui/timeline";
 
@@ -59,7 +62,7 @@ const content = [
     content: (
       <div className="space-y-4">
         <h3 className="text-2xl font-semibold">
-          In SiChuan Aerospace Vocational College
+          SiChuan Aerospace Vocational College
         </h3>
         <div className="space-y-2">
           {studyList.map((item) => (
@@ -74,7 +77,7 @@ const content = [
     content: (
       <div className="space-y-4">
         <h3 className="text-2xl font-semibold">
-          In SiChuan Aerospace Vocational College
+          Sichuan University of Science and Chemical Technology
         </h3>
         <div className="space-y-2">
           {otherList.map((item) => (
@@ -110,8 +113,11 @@ const content = [
 ];
 
 export default function Education() {
+  const { ref } = useSectionInView("Education", 0.5);
+
   return (
     <section
+      ref={ref}
       className="w-full max-w-[89vw] overflow-hidden  md:max-w-2xl lg:max-w-[60vw]"
       id="education"
     >

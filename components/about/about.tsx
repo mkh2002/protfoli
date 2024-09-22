@@ -7,6 +7,8 @@ import { RiQqLine } from "react-icons/ri";
 import { RxGithubLogo } from "react-icons/rx";
 import { motion } from "framer-motion";
 
+import { useSectionInView } from "@/lib/hooks/useSectionInView";
+
 import Social from "./social";
 
 const socials = [
@@ -35,6 +37,8 @@ const facts = [
 ];
 
 export default function About() {
+  const { ref } = useSectionInView("About", 0.5);
+
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -56,7 +60,7 @@ export default function About() {
   };
 
   return (
-    <section className="mt-10 w-full" id="about">
+    <section ref={ref} className="mt-10 w-full pb-40" id="about">
       <div className="mx-auto max-w-[89vw] rounded-md bg-background p-8 md:max-w-2xl lg:max-w-[60vw]">
         <div className="flex w-full flex-col">
           <div className="flex flex-col gap-4 md:flex-row md:gap-0">

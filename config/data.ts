@@ -50,8 +50,8 @@ export const site = [
     href: "#home",
   },
   {
-    name: "Projects",
-    href: "#projects",
+    name: "Works",
+    href: "#works",
   },
   {
     name: "Education",
