@@ -4,8 +4,8 @@ import { LuNavigation } from "react-icons/lu";
 import { useRouter } from "next/navigation";
 
 import { Spotlight } from "../ui/spotlight";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
 import ShimmerButton from "../ui/shimmer-button";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export default function Hero() {
   const router = useRouter();
@@ -40,12 +40,11 @@ export default function Hero() {
             initial={ani.initial}
             transition={ani.transition}
           >
-            A dynamic web protfolio with next.js
+            Dynamic portfolio crafted with Next.js
           </motion.h2>
           <TextGenerateEffect
-            className="text-center capitalize md:max-w-5xl lg:max-w-6xl"
-            duration={0.3}
-            words={"A Nextjs web portfolio with a dynamic design"}
+            className="text-center capitalize"
+            words="Dynamic portfolio crafted with modern desgin powered by Next.js"
           />
           <motion.p
             animate={ani.animate}
@@ -65,7 +64,7 @@ export default function Hero() {
             <ShimmerButton
               className="w-full space-x-2 rounded-xl px-6 py-3 text-sm md:w-auto"
               icon={<LuNavigation />}
-              word="Show My Project"
+              word="Show My Works"
               onClick={() => router.push("#projects")}
             />
           </motion.div>

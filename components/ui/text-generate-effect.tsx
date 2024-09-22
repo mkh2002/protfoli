@@ -41,7 +41,7 @@ export const TextGenerateEffect = ({
               key={word + idx}
               className={cn(
                 "text-background opacity-0",
-                idx > 5 ? "text-[hsl(var(--primary))]" : "text-foreground",
+                idx > 7 ? "text-[hsl(var(--primary))]" : "text-foreground",
               )}
               style={{
                 filter: filter ? "blur(10px)" : "none",
