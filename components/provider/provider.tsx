@@ -10,7 +10,7 @@ export default function Provider({
       disableTransitionOnChange
       enableSystem
       attribute="class"
-      defaultTheme="dark"
+      defaultTheme="system"
     >
       <ActiveSectionContextProvider>{children}</ActiveSectionContextProvider>
     </ThemeProvider>

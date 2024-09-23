@@ -79,6 +79,7 @@ export default function About() {
                 alt="about"
                 className="rounded-full"
                 height={200}
+                sizes="auto"
                 src="/profile.jpeg"
                 width={200}
               />

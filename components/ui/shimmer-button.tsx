@@ -18,7 +18,7 @@ export default function ShimmerButton({
   return (
     <button
       className={cn(
-        "inline-flex h-12 items-center justify-center animate-shimmer rounded-md border-primary/30 border bg-[linear-gradient(110deg,#000103,45%,hsl(var(--primary)),55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-foreground/70 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50",
+        "inline-flex h-12 items-center justify-center animate-shimmer rounded-md border-primary/30 border bg-[linear-gradient(110deg,hsl(var(--background)),45%,hsl(var(--primary)),55%,hsl(var(--background)))] bg-[length:200%_100%] px-6 font-medium text-foreground/70 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50",
         className,
       )}
       onClick={onClick}

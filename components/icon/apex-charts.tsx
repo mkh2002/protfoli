@@ -3,7 +3,6 @@ interface Props extends React.SVGAttributes<SVGElement> {}
 export const ApexChartsIcon = ({ ...props }: Props) => {
   return (
     <svg
-      enable-background="new 0 0 137 119"
       height="119px"
       id="Layer_1"
       version="1.1"

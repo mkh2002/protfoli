@@ -91,33 +91,33 @@ const content = [
         </div>
 
         <div className="mt-8 grid gap-2">
-          <div className="relative aspect-[16/10] w-full rounded-lg">
+          <div className="relative aspect-[16/10] w-full rounded-lg shadow shadow-muted/50">
             <Image
               fill
               priority
               alt="education"
-              className="h-full w-auto rounded-lg object-cover shadow-xl"
+              className="h-full w-auto rounded-lg "
               sizes="auto"
               src="/shop.png"
             />
-            <div className="absolute bottom-0 right-0 z-10 flex w-full items-center justify-end space-x-2 bg-gradient-to-t from-background to-transparent p-2 ">
+            <div className="absolute bottom-0 right-0 z-10 flex w-full items-center justify-end space-x-2 bg-gradient-to-l from-black/75 to-transparent p-2 ">
               <RiReactjsFill className="text-sky-500" />
               <RiTailwindCssFill className="text-sky-500" />
               <RiNextjsLine className="text-gray-500" />
-              <SiShadcnui className="size-2.5" />
+              <SiShadcnui className="size-2.5 text-white" />
               <ReacthookformIcon className="size-4 rounded-sm bg-pink-500 p-0.5" />
             </div>
           </div>
-          <div className="relative aspect-[16/10] w-full">
+          <div className="relative aspect-[16/10] w-full rounded-lg shadow shadow-muted/50">
             <Image
               fill
               priority
               alt="education"
-              className="h-full w-auto rounded-lg object-cover shadow-xl"
+              className="h-full w-auto rounded-lg shadow-xl"
               sizes="auto"
               src="/chart.png"
             />
-            <div className="absolute bottom-0 right-0 z-10 flex w-full justify-end space-x-2 bg-gradient-to-t from-background to-transparent p-2 ">
+            <div className="absolute bottom-0 right-0 z-10 flex w-full justify-end space-x-2 bg-gradient-to-l from-black/70 to-transparent p-2 ">
               <RiReactjsFill className="text-sky-500" />
               <RiTailwindCssFill className="text-sky-500" />
               <RiNextjsLine className="text-gray-500" />

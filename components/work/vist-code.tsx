@@ -11,7 +11,7 @@ export default function VistCode() {
         className="flex items-center gap-2 bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text font-bold text-transparent"
         url="https://github.com/mkh2002/protfoli"
       >
-        Github <RxGithubLogo size-4 />
+        Github <RxGithubLogo className="size-4" />
       </LinkPreview>
     </span>
   );
