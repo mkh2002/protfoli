@@ -14,7 +14,7 @@ export default function ToggleThemeIcon() {
 
   return (
     <Button
-      className="fixed bottom-10 right-10"
+      className="fixed bottom-4 right-4"
       size="icon"
       variant={"outline"}
       onClick={toggleTheme}

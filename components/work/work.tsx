@@ -58,7 +58,7 @@ const items = [
     className:
       "flex-col md:flex-row gap-4 md:col-span-6 md:row-span-2 lg:col-span-3",
     otherClass: "flex-1 order-1 justify-center flex flex-col",
-    icon: <LuFramer className="size-4 lg:hidden xl:block" />,
+    icon: <LuFramer className="size-4 md:hidden xl:block" />,
   },
   {
     header: <VistCode />,
