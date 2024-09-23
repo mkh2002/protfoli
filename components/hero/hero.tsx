@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { LuNavigation } from "react-icons/lu";
+import { useRouter } from "next/navigation";
 
 import { useSectionInView } from "@/lib/hooks/useSectionInView";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -12,6 +13,7 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 export default function Hero() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const router = useRouter();
   const ani = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -69,6 +71,7 @@ export default function Hero() {
               icon={<LuNavigation />}
               word="Show My Works"
               onClick={() => {
+                router.push("/#works");
                 setActiveSection("Works");
                 setTimeOfLastClick(Date.now());
               }}

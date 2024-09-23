@@ -67,7 +67,7 @@ const items = [
 ];
 
 export default function Works() {
-  const { ref } = useSectionInView("Works", 0.5);
+  const { ref } = useSectionInView("Works", 0.6);
 
   return (
     <motion.section
