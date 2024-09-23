@@ -31,7 +31,7 @@ const facts = [
     content:
       "🎓 Current student at Sichuan University of Science and Chemical Technology",
   },
-  { content: "💼 Currently working at InnovateTech Solutions" },
+  { content: "💻 I am currently awaiting employment opportunities" },
   { content: "🌱 Learn software development and data analysis" },
   { content: "🚄 Love traveling" },
 ];
