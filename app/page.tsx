@@ -7,6 +7,7 @@ import Works from "@/components/work/work";
 
 const ToggleThemeIcon = dynamic(
   () => import("@/components/toggle-theme-button"),
+  { ssr: false },
 );
 
 export default function Home() {
