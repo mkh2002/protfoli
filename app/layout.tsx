@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="en">
       <body
         className={cn(
           `${geistSans.variable} ${geistMono.variable} antialiased`,
