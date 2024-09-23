@@ -19,8 +19,8 @@ export default function Hero() {
   };
 
   return (
-    <section ref={ref} id="home">
-      <div className="pb-20 pt-36">
+    <section ref={ref} className="h-[90dvh]" id="home">
+      <div className="pt-36">
         <Spotlight
           className="-left-10 -top-40 h-screen md:-left-32 md:-top-20"
           fill="white"
@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
-      <div className="relative z-10 my-20 flex items-center justify-center">
+      <div className="relative z-10 my-20 flex h-full max-h-[60vh] items-center justify-center">
         <div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
           <motion.h2
             animate={ani.animate}

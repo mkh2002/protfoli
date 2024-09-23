@@ -37,8 +37,8 @@ export default function Framer() {
   };
 
   return (
-    <div className="relative order-2">
-      <div className="grid h-full grid-cols-3 grid-rows-2 gap-4 *:rounded-xl *:md:rounded-lg">
+    <div className="relative order-2 flex items-center">
+      <div className="grid h-full grid-cols-3 grid-rows-2 gap-4 *:rounded-xl *:md:rounded-lg lg:h-5/6 xl:h-full">
         <div className="flex aspect-square h-full items-center justify-center bg-gradient-to-br from-red-500 to-purple-500">
           <motion.div
             className="size-3/5 rounded-lg bg-foreground"

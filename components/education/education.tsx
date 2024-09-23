@@ -1,10 +1,15 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { RiNextjsLine, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiShadcnui } from "react-icons/si";
 
 import { useSectionInView } from "@/lib/hooks/useSectionInView";
 
 import { Timeline } from "../ui/timeline";
+import { ApexChartsIcon } from "../icon/apex-charts";
+import { NextuiIcon } from "../icon/nextui";
+import { ReacthookformIcon } from "../icon/react-hooks-form";
 
 const studyList = [
   {
@@ -91,20 +96,34 @@ const content = [
               fill
               priority
               alt="education"
-              className="object-cover"
+              className="h-full w-auto rounded-lg object-cover shadow-xl"
               sizes="auto"
               src="/shop.png"
             />
+            <div className="absolute bottom-0 right-0 z-10 flex w-full items-center justify-end space-x-2 bg-gradient-to-t from-background to-transparent p-2 ">
+              <RiReactjsFill className="text-sky-500" />
+              <RiTailwindCssFill className="text-sky-500" />
+              <RiNextjsLine className="text-gray-500" />
+              <SiShadcnui className="size-2.5" />
+              <ReacthookformIcon className="size-4 rounded-sm bg-pink-500 p-0.5" />
+            </div>
           </div>
           <div className="relative aspect-[16/10] w-full">
             <Image
               fill
               priority
               alt="education"
-              className="h-full w-auto rounded-lg object-cover"
+              className="h-full w-auto rounded-lg object-cover shadow-xl"
               sizes="auto"
               src="/chart.png"
             />
+            <div className="absolute bottom-0 right-0 z-10 flex w-full justify-end space-x-2 bg-gradient-to-t from-background to-transparent p-2 ">
+              <RiReactjsFill className="text-sky-500" />
+              <RiTailwindCssFill className="text-sky-500" />
+              <RiNextjsLine className="text-gray-500" />
+              <NextuiIcon className="mt-0.5 size-3 text-muted-foreground" />
+              <ApexChartsIcon className="mt-0.5 size-3 text-gray-500" />
+            </div>
           </div>
         </div>
       </div>
